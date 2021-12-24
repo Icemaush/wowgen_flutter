@@ -42,6 +42,34 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         backgroundColor: Colors.red[900],
       ),
+      endDrawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const SizedBox(
+              height: 113,
+              child: DrawerHeader(
+                  decoration: BoxDecoration(color: Colors.red),
+                  child: Text(
+                    'WoWGen',
+                    style: TextStyle(color: Colors.white),
+                  )),
+            ),
+            ListTile(
+                title: const Text('Generate character'),
+                onTap: () {
+                  print('Generate a random character');
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Build Character'),
+                onTap: () {
+                  print('Build a character');
+                  Navigator.pop(context);
+                })
+          ],
+        ),
+      ),
       backgroundColor: Colors.grey[900],
       body: Container(
           padding: const EdgeInsets.only(top: 20),
